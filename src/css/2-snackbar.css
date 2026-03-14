@@ -1,0 +1,84 @@
+body {
+  font-family:  Montserrat, sans-serif;
+}
+
+.container {
+    width: 360px;
+    display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+label input[type="number"]{
+  display: block;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #808080;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+input[type="number"]:hover {
+  border-color: #000;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #4E75FF;
+ 
+}
+
+
+fieldset {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 10px;
+ 
+}
+
+legend {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+ 
+}
+
+input[type="radio"]:hover {
+  accent-color: #000;
+}
+
+input[type="radio"]:checked {
+  accent-color: #4e75ff;
+  cursor: pointer;
+}
+
+
+button[type="submit"] {
+  padding: 12px 20px;
+  border: none;
+  background-color: #4E75FF;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #6C8CFF;
+}
