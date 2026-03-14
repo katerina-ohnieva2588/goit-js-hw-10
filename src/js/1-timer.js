@@ -46,7 +46,8 @@ startBtn.addEventListener("click", () => {
     if (deltaTime <= 0) {
   clearInterval(timerId);
   updateDisplay({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      input.disabled = false;  
+      fp.input.disabled = false;
+      fp.set("clickOpens", true);
       startBtn.disabled = true; 
       return;
     }
