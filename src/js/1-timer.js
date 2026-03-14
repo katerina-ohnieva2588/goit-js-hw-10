@@ -33,17 +33,23 @@ startBtn.disabled = false;
 flatpickr(input, options);
 
 startBtn.addEventListener("click", () => {
+  if (!userSelectedDate) return;
+  
+  
   startBtn.disabled = true;
+  input.disabled = true;
 
-  const timerId = setInterval(() => {
+  let timerId = setInterval(() => {
     const now = new Date();
     const deltaTime = userSelectedDate - now;
 
     if (deltaTime <= 0) {
   clearInterval(timerId);
   updateDisplay({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  return;
-}
+      input.disabled = false;  
+      startBtn.disabled = true; 
+      return;
+    }
 
     const time = convertMs(deltaTime);
     updateDisplay(time);

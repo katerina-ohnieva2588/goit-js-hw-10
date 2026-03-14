@@ -14,16 +14,21 @@ event.preventDefault();
 const promise = new Promise((resolve, reject) => {
 setTimeout(() => {
   if (state === "fulfilled") {
-    resolve(`✅ Fulfilled promise in ${delay}ms`);
-  } else {
-    reject(`❌ Rejected promise in ${delay}ms`);
-  }
-}, delay);
+                resolve(delay); 
+            } else {
+                reject(delay);
+            }
+        }, delay);
+    });
 
-});
-
-promise
-    .then(message => iziToast.success({ message }))
-    .catch(message => iziToast.error({ message }));
+    promise
+        .then(delay => {
+            const message = `✅ Fulfilled promise in ${delay}ms`;
+            iziToast.success({ message });
+        })
+        .catch(delay => {
+            const message = `❌ Rejected promise in ${delay}ms`;
+            iziToast.error({ message });
+        });
 
 });
