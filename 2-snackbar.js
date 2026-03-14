@@ -1,0 +1,2 @@
+import{n as e}from"./assets/rolldown-runtime-DNdEV4Dn.js";import"./assets/modulepreload-polyfill-BnkOoLKg.js";import{n as t}from"./assets/vendor-By9r1nej.js";var n=e(t(),1),r=document.querySelector(`.form`);r.addEventListener(`submit`,e=>{e.preventDefault();let t=Number(r.delay.value),i=r.state.value;new Promise((e,n)=>{setTimeout(()=>{i===`fulfilled`?e(`✅ Fulfilled promise in ${t}ms`):n(`❌ Rejected promise in ${t}ms`)},t)}).then(e=>n.default.success({message:e})).catch(e=>n.default.error({message:e}))});
+//# sourceMappingURL=2-snackbar.js.map
